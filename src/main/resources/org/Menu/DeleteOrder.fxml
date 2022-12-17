@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="387.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Menu.Controller">
+    <children>
+      <ImageView fitHeight="387.0" fitWidth="515.0">
+         <image>
+            <Image url="@../../fon.jpg" />
+         </image>
+      </ImageView>
+        <Button layoutX="173.0" layoutY="360.0" onAction="#DeleteOrder" prefHeight="26.0" prefWidth="164.0" text="Видалити замовлення">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></Button>
+        <Label layoutX="152.0" layoutY="72.0" text="Видалення замовлення">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font></Label>
+        <ListView fx:id="orders" layoutX="273.0" layoutY="134.0" onMouseClicked="#GETORDER" prefHeight="200.0" prefWidth="200.0" />
+        <MenuButton layoutX="273.0" layoutY="103.0" mnemonicParsing="false" text="Список замовлень">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Список">
+                    <graphic>
+                        <Button mnemonicParsing="false" onAction="#ShowOrders" text="Button" />
+                    </graphic>
+                </MenuItem>
+                <MenuItem mnemonicParsing="false" text="Посортований за іменем користувача">
+                    <graphic>
+                        <Button mnemonicParsing="false" onAction="#ShowOrdersSortByNameCusmomer" text="Button" />
+                    </graphic>
+                </MenuItem>
+            </items>
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+        </MenuButton>
+        <Button layoutX="448.0" layoutY="343.0" onAction="#SwitchToSceneMain" prefHeight="43.0" prefWidth="66.0" text="Назад">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></Button>
+      <Label fx:id="label7" layoutX="45.0" layoutY="273.0" />
+      <Label fx:id="label6" layoutX="45.0" layoutY="245.0" />
+      <Label fx:id="label5" layoutX="45.0" layoutY="216.0" />
+      <Label fx:id="label4" layoutX="45.0" layoutY="190.0" />
+      <Label fx:id="label3" layoutX="45.0" layoutY="163.0" />
+      <Label fx:id="label2" layoutX="45.0" layoutY="135.0" />
+      <Label fx:id="label1" layoutX="45.0" layoutY="107.0" />
+    </children>
+</AnchorPane>
